@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+
+<h2 id="result">Waiting...</h2>
+
+<script>
+function greet(name, callback) {
+
+    setTimeout(function() {
+
+        document.getElementById("result").innerHTML =
+            "Hello " + name;
+
+        callback();
+
+    }, 2000);
+}
+
+function completed() {
+
+    console.log("Callback executed successfully.");
+}
+
+greet("Khushi", completed);
+</script>
+
+</body>
+</html>

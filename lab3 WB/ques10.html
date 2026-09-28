@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+</head>
+<body>
+
+<form id="myForm">
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Confirm Password:
+    <input type="password" id="confirmPassword">
+    <br><br>
+
+    <span id="message"></span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    let password = document.getElementById("password").value;
+    let confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+        event.preventDefault();
+        document.getElementById("message").innerHTML =
+            "Passwords do not match!";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Password matched successfully.";
+    }
+});
+</script>
+
+</body>
+</html>

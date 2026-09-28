@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Onboarding Form</title>
+
+<style>
+body {
+    font-family: Arial;
+}
+
+.step {
+    width: 350px;
+    margin: 30px ;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Onboarding Form</h1>
+
+<div class="step" id="step1">
+
+    <h2>Step 1: Personal Details</h2>
+
+    <input type="text" placeholder="Your Name">
+
+    <button onclick="nextStep(1)">
+        Next
+    </button>
+
+</div>
+
+<div class="step" id="step2" style="display:none;">
+
+    <h2>Step 2: Education</h2>
+
+    <input type="text" placeholder="Your Course">
+
+    <button onclick="nextStep(2)">
+        Next
+    </button>
+
+</div>
+
+<div class="step" id="step3" style="display:none;">
+
+    <h2>Step 3: Complete</h2>
+
+    <p>Your details are ready.</p>
+
+    <button onclick="alert('Submitted!')">
+        Submit
+    </button>
+
+</div>
+
+<script>
+function nextStep(step) {
+
+    document.getElementById("step" + step)
+        .style.display = "none";
+
+    document.getElementById("step" + (step + 1))
+        .style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+
+<div id="result"></div>
+
+<script>
+let numbers = [5, 2, 8, 1, 10];
+
+numbers.push(15);
+numbers.pop();
+
+let sorted = [...numbers].sort((a, b) => a - b);
+
+let doubled = numbers.map(n => n * 2);
+
+let filtered = numbers.filter(n => n > 5);
+
+document.getElementById("result").innerHTML =
+    "Original Array: " + numbers + "<br>" +
+    "Sorted Array: " + sorted + "<br>" +
+    "Doubled Array: " + doubled + "<br>" +
+    "Numbers greater than 5: " + filtered;
+</script>
+
+</body>
+</html>

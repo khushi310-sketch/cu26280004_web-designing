@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<input type="number" id="num1" placeholder="First number">
+<input type="number" id="num2" placeholder="Second number">
+
+<br><br>
+
+<button id="add">+</button>
+<button id="sub">-</button>
+<button id="mul">*</button>
+<button id="div">/</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculate(operation) {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    let result;
+
+    if (operation === "+") result = a + b;
+    if (operation === "-") result = a - b;
+    if (operation === "*") result = a * b;
+    if (operation === "/") result = b !== 0 ? a / b : "Cannot divide by zero";
+
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+
+document.getElementById("add").addEventListener("click", () => calculate("+"));
+document.getElementById("sub").addEventListener("click", () => calculate("-"));
+document.getElementById("mul").addEventListener("click", () => calculate("*"));
+document.getElementById("div").addEventListener("click", () => calculate("/"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typography Form</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+label {
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input {
+    font-family: Arial;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+input::placeholder {
+    font-family: Arial;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+form {
+    width: 350px;
+    margin: 30px ;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form>
+
+    <label>First Name</label>
+    <input type="text" placeholder="enter first name">
+
+    <label>Last Name</label>
+    <input type="text" placeholder="enter last name">
+
+    <label>Email</label>
+    <input type="email" placeholder="enter email">
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+
+<style>
+form {
+    width: 400px;
+    margin: 30px ;
+}
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid blue;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: blue;
+}
+
+input, textarea {
+    margin: 8px 0;
+    padding: 8px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Student Survey</h1>
+
+<form>
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        Name:
+        <input type="text">
+
+        <br>
+
+        Email:
+        <input type="email">
+    </fieldset>
+
+    <fieldset>
+        <legend>Feedback</legend>
+
+        <textarea rows="5"
+                  placeholder="Your opinion"></textarea>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

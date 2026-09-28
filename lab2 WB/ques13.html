@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Controls</title>
+
+<style>
+input {
+    display: none;
+}
+
+label {
+    display: block;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.box {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid blue;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+input:checked + .box {
+    background-color: blue;
+}
+
+.radio {
+    border-radius: 50%;
+}
+
+input:checked + .radio {
+    background-color: green;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Custom Checkboxes</h2>
+
+<label>
+    <input type="checkbox">
+    <span class="box"></span>
+    Reading
+</label>
+
+<label>
+    <input type="checkbox">
+    <span class="box"></span>
+    Music
+</label>
+
+<h2>Custom Radio Buttons</h2>
+
+<label>
+    <input type="radio" name="gender">
+    <span class="box radio"></span>
+    Male
+</label>
+
+<label>
+    <input type="radio" name="gender">
+    <span class="box radio"></span>
+    Female
+</label>
+
+</body>
+</html>

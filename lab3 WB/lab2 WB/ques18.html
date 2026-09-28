@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+
+<style>
+body {
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.form, .location {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<h1>Contact Us</h1>
+
+<div class="container">
+
+    <div class="form">
+
+        <h2>Send Message</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+
+    <div class="location">
+
+        <h2>Our Location</h2>
+
+        <p>Company Name: ABC Technologies</p>
+        <p>Address: Meerut, Uttar Pradesh</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

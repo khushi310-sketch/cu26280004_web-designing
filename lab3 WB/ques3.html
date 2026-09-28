@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade</title>
+</head>
+<body>
+
+<h2 id="result"></h2>
+
+<script>
+let marks = Number(prompt("Enter marks:"));
+let grade;
+
+if (marks >= 90) {
+    grade = "A";
+} else if (marks >= 80) {
+    grade = "B";
+} else if (marks >= 70) {
+    grade = "C";
+} else if (marks >= 60) {
+    grade = "D";
+} else {
+    grade = "F";
+}
+
+switch (grade) {
+    case "A":
+        document.getElementById("result").innerHTML = "Grade: A - Excellent";
+        break;
+    case "B":
+        document.getElementById("result").innerHTML = "Grade: B - Very Good";
+        break;
+    case "C":
+        document.getElementById("result").innerHTML = "Grade: C - Good";
+        break;
+    case "D":
+        document.getElementById("result").innerHTML = "Grade: D - Pass";
+        break;
+    default:
+        document.getElementById("result").innerHTML = "Grade: F - Fail";
+}
+</script>
+
+</body>
+</html>

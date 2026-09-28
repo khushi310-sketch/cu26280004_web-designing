@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form>
+
+    <label>Full Name:</label>
+    <input type="text"
+           required
+           minlength="3"
+           maxlength="30"
+           pattern="[A-Za-z ]+">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" required>
+
+    <br><br>
+
+    <label>Mobile Number:</label>
+    <input type="text"
+           required
+           pattern="[0-9]{10}"
+           maxlength="10">
+
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password"
+           required
+           minlength="8"
+           maxlength="20">
+
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
