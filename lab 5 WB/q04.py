@@ -1,0 +1,27 @@
+import mysql.connector
+
+connection = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password=""
+)
+
+cursor = connection.cursor()
+
+cursor.execute("CREATE DATABASE IF NOT EXISTS python_web_db")
+
+cursor.execute("USE python_web_db")
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    age INT
+)
+""")
+
+print("Database and users table created successfully.")
+
+cursor.close()
+connection.close()
